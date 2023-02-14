@@ -23,8 +23,23 @@ router.post("/newMovies", (req, res) => {
   });
 });
 
+router.post("/newRating", (req, res) => {
+  Rating.create(
+    req.body, (err, result) => {
+    if (err) throw new Error(err);
+    res.json(result);
+  });
+});
+
 router.delete("/removeMovies", (req, res) => {
   Movie.findOneAndRemove({ _id: req.body.id }, (err, result) => {
+    if (err) throw new Error(err);
+    res.end(result);
+  });
+});
+
+router.delete("/removeRating", (req, res) => {
+  Rating.findOneAndRemove({ _id: req.body.id }, (err, result) => {
     if (err) throw new Error(err);
     res.end(result);
   });
@@ -36,6 +51,15 @@ if(err) throw new Error(err);
 res.json(result);
 });
 });
+
+router.put("/rating/:id", (req, res) => {
+  Rating.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, result) => {
+if(err) throw new Error(err);
+res.json(result);
+});
+});
+
+
   module.exports = router;
 
 
