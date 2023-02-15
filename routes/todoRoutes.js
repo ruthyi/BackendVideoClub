@@ -48,6 +48,17 @@ router.get("/movContenga/:title", (req, res) => {
   });
 
 
+  router.get("/ratingContenga/:title", (req, res) => {
+    const entrada =req.params.title;
+
+    Rating.find(
+      {
+        title: { $regex: entrada, $options: 'i' }
+      },(err, result) => {
+        if (err) throw new Error(err);
+        res.json(result);
+      });
+    });
 
 
 router.post("/newMovies", (req, res) => {
