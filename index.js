@@ -23,7 +23,7 @@ app.use(cors());
 
 const use="todolist";
 const password='1234';
-const dbname='todolist';
+const dbname='VideoClub';
 
 const url = `mongodb+srv://${use}:${password}@bd.y5qzq9a.mongodb.net/${dbname}?retryWrites=true&w=majority`;
 
