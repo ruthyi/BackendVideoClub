@@ -18,8 +18,14 @@ const connectionOptions = {
 
 app.use(express.json()); //Used to parse incoming or transform requests with JSON loads
 
+const corsOption={
+  origin:"*",
+  method:["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders:["Origin", "X-Requested-With", "Content-Type", "Accept"],
+  credentials: true
+};
 
-app.use(cors());
+app.use(cors(corsOption));
 
 const use="todolist";
 const password='1234';
