@@ -37,7 +37,6 @@ router.get("/movIndice/:title", (req, res) => {
 
 router.get("/movContenga/:title", (req, res) => {
   const entrada =req.params.title;
-
   Movie.find(
     {
       title: { $regex: entrada, $options: 'i' }
@@ -47,6 +46,12 @@ router.get("/movContenga/:title", (req, res) => {
     });
   });
 
+  router.get("/movContenga", (req, res) => {
+    Movie.find((err, result) => {
+      if (err) throw new Error(err);
+      res.json(result);
+    });
+  });
 
   router.get("/ratingContenga/:title", (req, res) => {
     const entrada =req.params.title;

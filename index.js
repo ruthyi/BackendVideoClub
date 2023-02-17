@@ -10,7 +10,6 @@ const app = express();//Uses the Express library to create the server
 // which is used to connect to a MongoDB database.
 const todoRoutes = require("./routes/todoRoutes"); //requires the todoRoutes file,ENDPOINST
 
-
 const connectionOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
