@@ -43,7 +43,7 @@ donde se puede traer los datos de una pelicula de acuerdo a si es las letras ini
 
 ### Autores ✒️ 
 * Daniel Veloza - Scrum Master Fronted - [Croosk2k](https://github.com/Crooks2k)
-* Ruth Lozano- Product Owner  Backend - [ruthyi](https://github.com/ruthyi)
+* Ruth Lizcano- Product Owner  Backend - [ruthyi](https://github.com/ruthyi)
 *  Valentina Godoy - Team member Backend - [Valentina9911](https://github.com/Valentina9911)
  
  
